@@ -32,23 +32,6 @@ export const AuthProvider : React.FC<{ children: ReactNode }>= ({children}) => {
     email: "",
   });
 
-//   const createUser = (email:string, password:string):any => {
-//     const auth = getAuth();
-//     createUserWithEmailAndPassword(auth, email, password)
-//       .then((userCredential) => {
-//         // Signed in 
-//         const user = userCredential.user;
-//         console.log(user)
-//         // ...
-//         return {status: true, message:'User Created sucessfully'}
-//       })
-//       .catch((error) => {
-//         const errorCode = error.code;
-//         const errorMessage = error.message;
-//         return {status: false, message:`${error.message}`}
-//       });
-//   }
-
   //Checking if user is logged in
   useEffect(() => {
     const checkIsLoggedIn = ():void => {
@@ -62,10 +45,11 @@ export const AuthProvider : React.FC<{ children: ReactNode }>= ({children}) => {
                 loggedIn: false,
                 email: "",
               })
+            //   navigate('/login', {replace: true})
         }
     }
     checkIsLoggedIn()
-  }, []);
+  }, [userDetails.loggedIn]);
 
 
   // values for the context provider

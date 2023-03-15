@@ -9,7 +9,7 @@ const Spinner = () => {
     //   </div>
     // </div>
     <div className="flex justify-center items-center mt-2">
-      <SpinnerFB color="success" aria-label="Extra large spinner example" />
+      <SpinnerFB color="success" aria-label="Extra large spinner example" className="w-[100px] h-[100px]"/>
     </div>
   );
 };
