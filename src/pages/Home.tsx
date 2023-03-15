@@ -34,20 +34,20 @@ const Home: React.FC = () => {
     setRequest({status: true, error: ''})
 
     //texting for empty strings
-    // if(!baseLanguage){
-    //   setRequest({status: false, error: 'Please Enter Base Language'})
-    //   return
-    // }
+    if(!baseLanguage){
+      setRequest({status: false, error: 'Please Enter Base Language'})
+      return
+    }
 
-    // if(!translatedToLanguage){
-    //   setRequest({status: false, error: 'Please Enter translated To Language'})
-    //   return
-    // }
+    if(!translatedToLanguage){
+      setRequest({status: false, error: 'Please Enter translated To Language'})
+      return
+    }
 
-    // if(!baseText){
-    //   setRequest({status: false, error: 'Please Enter Base Text'})
-    //   return
-    // }
+    if(!baseText){
+      setRequest({status: false, error: 'Please Enter Base Text'})
+      return
+    }
     try {
         const response:any = await openai.createCompletion({
         model: "text-davinci-003",
@@ -68,7 +68,6 @@ const Home: React.FC = () => {
       setRequest({status: false, error: ''})
       
       const translation: string = response.data.choices[0].text.trim();
-      console.log(translation)
       setTranslatedText(translation);
     } catch (error: any) {
       setRequest({status: false, error: 'Cannot perform translation at the moment, try again!'})
