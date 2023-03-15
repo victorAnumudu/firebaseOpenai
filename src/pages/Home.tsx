@@ -5,7 +5,7 @@ import Spinner from "../component/Spinner";
 
 
 const configuration: Configuration = new Configuration({
-  apiKey: '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',
+  apiKey: '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',
 });
 
 const openai: OpenAIApi = new OpenAIApi(configuration);
@@ -69,6 +69,7 @@ const Home: React.FC = () => {
       
       const translation: string = response.data.choices[0].text.trim();
       setTranslatedText(translation);
+      // console.log(translation)
     } catch (error: any) {
       setRequest({status: false, error: 'Cannot perform translation at the moment, try again!'})
     }
