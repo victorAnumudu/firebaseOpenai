@@ -101,7 +101,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="w-[500px] bg-slate-100 shadow-lg mt-5 absolute top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%]">
+    <div className="w-[350px] bg-slate-100 shadow-lg mt-5 absolute top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%]">
       <div>
         <h2 className="relative text-center p-3 mb-3 text-2xl before:w-2/4 before:h-0.5 before:absolute before:left-[50%] before:bottom-0 before:translate-x-[-50%] before:bg-blue-500">Signup</h2>
         <div className="">

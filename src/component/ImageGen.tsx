@@ -8,7 +8,6 @@ import SiteAPI from "../vendor/Services"; // site api call services
 import openai from "../vendor/Openai"; // openai api
 
 const ImageGen: React.FC = () => {
-  const [allLanguages, setAllLanguages] = useState<any>([]); // holds values of all languages
 
   const [genImage, setGenImage] = useState<string>('')
 
@@ -42,7 +41,7 @@ const ImageGen: React.FC = () => {
         // model: "text-davinci-003",
         // prompt: `Translate this into fr:how are you`,
         // prompt: `Translate from ${baseLanguage} to ${translatedToLanguage}: ${baseText}`,
-        prompt: `image of a baby boy`,
+        prompt: baseText,
         n: 1,
         size: "1024x1024",
         // temperature: 0.3,
