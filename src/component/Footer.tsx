@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="container">
+    // <div className="w-full absolute bottom-0 left-0">
+    <div className="w-full">
       <FooterFB bgDark={true}>
         <div className="w-full">
           <div className="grid w-full grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">

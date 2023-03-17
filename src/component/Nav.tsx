@@ -33,14 +33,14 @@ const Nav = () => {
     }
   
   return (
-    <div className='sticky top-0 p-3 bg-gray-700 text-white'>
+    <div className='sticky top-0 p-3 bg-gray-700 text-white h-[70px]'>
         <div className='flex justify-between items-center'>
-        <span>NavBs</span>
-        <div className='flex gap-3 justify-center items-center'>
-            <span><Link className={`text-decoration-none fs-5 ${location.pathname == '/' ? 'text-slate-300' : 'text-white'}`} to='/'>Home</Link></span>
-            <span><Link className={`text-decoration-none fs-5 ${location.pathname == '/about' ? 'text-slate-300' : 'text-white'}`} to='/about'>About</Link></span>
-            <button className='bg-blue-500 hover:bg-blue-600 p-2 rounded' onClick={()=> handleLogout()}>Logout</button>
-        </div>
+          <span>NavBs</span>
+          <div className='flex gap-3 justify-center items-center'>
+              <span><Link className={`text-decoration-none fs-5 ${location.pathname == '/' ? 'text-slate-300' : 'text-white'}`} to='/'>Home</Link></span>
+              <span><Link className={`text-decoration-none fs-5 ${location.pathname == '/about' ? 'text-slate-300' : 'text-white'}`} to='/about'>About</Link></span>
+              <button className='bg-blue-500 hover:bg-blue-600 p-2 rounded' onClick={()=> handleLogout()}>Logout</button>
+          </div>
         </div>
     </div>
   )

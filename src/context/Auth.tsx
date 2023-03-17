@@ -24,7 +24,6 @@ type ValueType = {
 //   }
 
 export const AuthProvider : React.FC<{ children: ReactNode }>= ({children}) => {
-  let navigate = useNavigate();
 
   // active user details
   let [userDetails, setUserDetails] = useState<UserDetails>({
@@ -45,7 +44,6 @@ export const AuthProvider : React.FC<{ children: ReactNode }>= ({children}) => {
                 loggedIn: false,
                 email: "",
               })
-            //   navigate('/login', {replace: true})
         }
     }
     checkIsLoggedIn()

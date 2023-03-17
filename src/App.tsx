@@ -12,7 +12,7 @@ function App() {
   let allPaths = ['/', '/about'] // kkeps track of all route in the app
 
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto relative'>
       {/* {(location.pathname == '/login' || location.pathname == '/signup' || location.pathname == '*') ? <></> : <Nav />} */}
       {allPaths.includes(location.pathname) && <Nav />}
       <Router />
